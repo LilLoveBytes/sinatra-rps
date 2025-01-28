@@ -1,0 +1,16 @@
+<h2> We played paper! </h2>
+
+<h2>They played <%= @them %>!</h2>
+
+<% if @them == 'rock'%>
+<h2> We won! </h2>
+
+<% elsif @them == 'scissors'%>
+<h2> We lost! </h2>
+
+<% else %>
+<h2> We tied! </h2>
+
+<% end %>
+
+<a href="/"> Rules</a>

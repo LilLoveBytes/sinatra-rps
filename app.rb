@@ -1,9 +1,24 @@
 require "sinatra"
 require "sinatra/reloader"
 
+rps = ['rock', 'paper', 'scissors']
+
+
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+  erb(:home)
 end
+
+get("/scissors") do
+  @them = rps.sample
+  erb(:scissors)
+end
+
+get("/rock") do
+  @them = rps.sample
+  erb(:rock)
+end
+
+get("/paper") do
+  @them = rps.sample
+  erb(:paper)
+end 
